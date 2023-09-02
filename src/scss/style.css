@@ -1,0 +1,337 @@
+:root {
+  --gray-text-color: #666;
+  --blue-color: #0056c1;
+}
+
+@font-face {
+  font-family: "SFProDisplay-light";
+  src: url("../fonts/SFProDisplay-light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SFProDisplay-medium";
+  src: url("../fonts/SFProDisplay-medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SFProDisplay-regular";
+  src: url("../fonts/SFProDisplay-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SFProDisplay-semibold";
+  src: url("../fonts/SFProDisplay-semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SFProDisplay-bold";
+  src: url("../fonts/SFProDisplay-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  width: 100vw;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+.site-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.site-header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.header-top-container {
+  width: 100%;
+  display: flex;
+  height: 50px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(38, 38, 38, 0.062745098);
+  padding: 0 30px;
+}
+
+.header-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-item {
+  flex-wrap: wrap;
+}
+
+.left-item-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 15px;
+}
+.left-item-title a {
+  font-size: 14px;
+  color: var(--gray-text-color);
+  font-family: "SFProDisplay-light";
+  margin-right: 25px;
+}
+.left-item-title a:not(:last-child):hover {
+  text-decoration: underline;
+}
+
+.header-blue-button {
+  border: 1px solid var(--blue-color);
+  padding: 6px 12px;
+  border-radius: 20px;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+.header-blue-button:hover {
+  background-color: var(--blue-color);
+}
+.header-blue-button:hover > p {
+  color: white;
+}
+.header-blue-button p {
+  font-family: "SFProDisplay-medium";
+  color: var(--blue-color);
+  transition: color 0.3s ease;
+}
+
+.right-item {
+  gap: 20px;
+  padding: 0 15px;
+}
+
+.header-search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+}
+.header-search img {
+  width: 12px;
+  height: 12px;
+}
+.header-search p {
+  font-size: 14px;
+  font-family: "SFProDisplay-light";
+  color: var(--gray-text-color);
+}
+
+.header-language {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 50px;
+  position: relative;
+  cursor: pointer;
+}
+.header-language:hover > img {
+  transform: rotate(0deg);
+}
+.header-language:hover .language-dropdown {
+  display: flex;
+}
+.header-language p {
+  font-family: "SFProDisplay-light";
+  color: var(--gray-text-color);
+  font-size: 14px;
+}
+.header-language img {
+  width: 10px;
+  height: 10px;
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+.header-phone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+}
+.header-phone img {
+  width: 12px;
+  height: 12px;
+  color: var(--gray-text-color);
+}
+.header-phone a {
+  font-family: "SFProDisplay-semibold";
+  color: var(--gray-text-color);
+  font-size: 14px;
+}
+
+.language-dropdown {
+  display: none;
+  width: 160px;
+  height: auto;
+  flex-direction: column;
+  background-color: white;
+  position: absolute;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  top: 49px;
+  left: -120px;
+}
+.language-dropdown .lang-dropdown-item {
+  display: flex;
+  width: 100%;
+  height: 55px;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 0 15px;
+  transition: background 0.3s ease;
+}
+.language-dropdown .lang-dropdown-item:hover {
+  background: rgba(38, 38, 38, 0.0352941176);
+}
+.language-dropdown .lang-dropdown-item img {
+  width: 24px;
+  height: 24px;
+  transform: rotate(360deg);
+}
+.language-dropdown .lang-dropdown-item p {
+  color: black;
+  font-family: "SFProDisplay-regular";
+  font-size: 16px;
+}
+
+.header-mid-container {
+  display: flex;
+  width: 100%;
+  height: 75px;
+  align-items: center;
+  padding: 0 40px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.1);
+}
+
+.header-mid-block {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mid-block-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.mid-block-items .abb-logo {
+  width: 110px;
+  height: 50px;
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+.mid-title-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-family: "SFProDisplay-medium";
+}
+.mid-title-item:hover a {
+  color: black;
+}
+.mid-title-item:hover p {
+  color: black;
+}
+.mid-title-item a {
+  color: rgba(128, 128, 128, 0.603);
+  transition: color 0.3s ease;
+}
+.mid-title-item p {
+  color: rgba(128, 128, 128, 0.603);
+  transition: color 0.3s ease;
+}
+.mid-title-item .active-black {
+  color: black;
+}
+
+.internet-banking-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  gap: 8px;
+}
+.internet-banking-block img {
+  width: 24px;
+  height: 24px;
+}
+.internet-banking-block p {
+  font-family: "SFProDisplay-semibold";
+  font-size: 15px;
+  color: var(--blue-color);
+}
+
+.header-bottom-container {
+  display: flex;
+  width: 100%;
+  height: 75px;
+  align-items: center;
+  padding: 0 40px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.1);
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0 24px 0 0;
+  height: 100%;
+  position: relative;
+}
+.nav-item a {
+  font-size: 15px;
+  font-family: "SFProDisplay-regular";
+  color: black;
+}
+.nav-item .blue-loader {
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  background-color: rgba(0, 87, 193, 0.6117647059);
+  bottom: 0;
+  left: 0;
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+.nav-item:hover .blue-loader {
+  width: 75%;
+}/*# sourceMappingURL=style.css.map */
