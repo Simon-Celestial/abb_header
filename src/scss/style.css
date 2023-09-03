@@ -92,7 +92,6 @@ body {
 .left-item-title {
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-wrap: wrap;
   padding: 0 15px;
 }
@@ -104,6 +103,24 @@ body {
 }
 .left-item-title a:not(:last-child):hover {
   text-decoration: underline;
+}
+
+.left-item-menu-block {
+  display: none;
+  gap: 8px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+.left-item-menu-block p {
+  font-size: 14px;
+  color: black;
+  font-family: "SFProDisplay-semibold";
+}
+.left-item-menu-block img {
+  width: 10px;
+  height: 10px;
+  transform: rotate(180deg);
 }
 
 .header-blue-button {
@@ -282,6 +299,13 @@ body {
   color: black;
 }
 
+.hamburger {
+  display: none;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
 .internet-banking-block {
   display: flex;
   align-items: center;
@@ -322,6 +346,143 @@ body {
   font-family: "SFProDisplay-regular";
   color: black;
 }
+.nav-item:hover > .nav-item-dropdown {
+  display: flex;
+}
+.nav-item .nav-item-dropdown {
+  background-color: white;
+  width: 100vw;
+  position: absolute;
+  top: 74px;
+  left: -40px;
+  display: flex;
+  position: absolute;
+  z-index: 9999;
+  border-top: 1px solid rgba(128, 128, 128, 0.1);
+  padding: 50px 100px;
+  cursor: default;
+}
+.nav-item .nav-item-dropdown::after {
+  content: url("../images/close.png");
+  position: absolute;
+  right: 50px;
+  top: 50px;
+  cursor: pointer;
+}
+.nav-item .credit-dropdown {
+  display: none;
+}
+.nav-item .mortgage-dropdown {
+  left: -117px;
+  display: none;
+}
+.nav-item .mortgage-dropdown .dropdown-full-container-block {
+  gap: 45px;
+}
+.nav-item .deposit-dropdown {
+  display: none;
+  left: -187px;
+}
+.nav-item .cards-dropdown {
+  display: none;
+  left: -277px;
+}
+.nav-item .mortgage-text-margin {
+  padding-bottom: 20px;
+}
+.nav-item .money-transfer-dropdown {
+  display: none;
+  left: -342px;
+}
+.nav-item .current-account {
+  display: none;
+  left: -462px;
+}
+.nav-item .electronic-services {
+  display: none;
+  left: -553px;
+}
+.nav-item .bank-24 {
+  display: none;
+  left: -689px;
+}
+.nav-item .cashback {
+  display: none;
+  left: -778px;
+}
+.nav-item .partner-text-margin {
+  padding-bottom: 20px;
+}
+.nav-item .dropdown-full-container {
+  width: 100%;
+  display: flex;
+}
+.nav-item .dropdown-full-container-block {
+  display: flex;
+  gap: 50px;
+  width: 41%;
+}
+.nav-item .title-item {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 250px;
+}
+.nav-item .title-item a {
+  font-size: 17px;
+  font-family: "SFProDisplay-light";
+  color: var(--gray-text-color);
+  text-align: start;
+}
+.nav-item .dropdown-full-container-second {
+  display: flex;
+  padding-left: 50px;
+  border-left: 1px solid rgba(128, 128, 128, 0.1);
+  gap: 50px;
+}
+.nav-item .dropdown-full-container-second .img-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-item .dropdown-full-container-second .img-block img {
+  width: 347px;
+  height: 217px;
+}
+.nav-item .dropdown-full-container-second .second-title-item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+}
+.nav-item .dropdown-full-container-second h2 {
+  font-size: 24px;
+  color: black;
+  font-family: "SFProDisplay-medium";
+  font-weight: 500;
+}
+.nav-item .dropdown-full-container-second p {
+  font-size: 16px;
+  color: var(--gray-text-color);
+  font-family: "SFProDisplay-light";
+  font-family: 100;
+}
+.nav-item .dropdown-full-container-second button {
+  width: 150px;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: transparent;
+  font-size: 16px;
+  color: black;
+  font-family: "SFProDisplay-medium";
+  cursor: pointer;
+  transition: color 0.3s ease, background 0.3s ease;
+}
+.nav-item .dropdown-full-container-second button:hover {
+  background: black;
+  color: white;
+}
 .nav-item .blue-loader {
   position: absolute;
   width: 0%;
@@ -334,4 +495,235 @@ body {
 }
 .nav-item:hover .blue-loader {
   width: 75%;
+}
+
+.site-main {
+  display: flex;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-background {
+  display: flex;
+  width: 100%;
+  height: auto;
+  background: linear-gradient(90deg, #e1ebff 9.88%, #afb9cd 92.09%);
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-container {
+  display: flex;
+  width: 1300px;
+  height: 500px;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 0 40px;
+}
+
+.swiper-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  width: 410px;
+  margin-top: 20px;
+}
+.swiper-title h2 {
+  font-size: 45px;
+  font-family: "SFProDisplay-semibold";
+  color: black;
+}
+.swiper-title p {
+  font-size: 18px;
+  font-family: "SFProDisplay-medium";
+  color: black;
+}
+.swiper-title button {
+  font-size: 16px;
+  font-family: "SFProDisplay-medium";
+  color: black;
+  margin-top: 24px;
+  background-color: transparent;
+  outline: 0;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 195px;
+  height: 50px;
+  transition: color 0.3s ease, background 0.3s ease;
+  cursor: pointer;
+}
+.swiper-title button:hover {
+  background-color: black;
+  color: white;
+}
+
+.swiper-buttons-block {
+  display: flex;
+  width: auto;
+  height: auto;
+  align-items: center;
+  margin-top: 40px;
+}
+.swiper-buttons-block .swiper-button {
+  width: 35px;
+  height: 4px;
+  background-color: white;
+  border-radius: 1px;
+  cursor: pointer;
+}
+.swiper-buttons-block .swiper-button:not(:last-child) {
+  margin-right: 20px;
+}
+
+.swiper-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  width: auto;
+  position: relative;
+}
+.swiper-image::after {
+  border-radius: 50%;
+  bottom: -50%;
+  content: "";
+  left: 0;
+  padding-bottom: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: 22;
+  background-color: hsla(0, 0%, 100%, 0.1);
+}
+.swiper-image img {
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 500px;
+  width: 500px;
+  display: block;
+  z-index: 2222;
+}
+
+@media only screen and (max-width: 1117px) {
+  .left-item-title a {
+    margin-top: 2px;
+  }
+  .internet-banking-block img {
+    width: 14.5px;
+    height: 14.5px;
+  }
+  .internet-banking-block p {
+    width: 70px;
+  }
+  .swiper-title {
+    width: 300px;
+    margin-top: 50px;
+  }
+  .swiper-container {
+    width: 950px;
+  }
+}
+@media only screen and (max-width: 993px) {
+  .left-item-title a {
+    display: none;
+  }
+  .left-item-menu-block {
+    display: flex;
+  }
+  .header-top-container {
+    padding: 0 10px;
+  }
+  .header-search p {
+    display: none;
+  }
+  .mid-title-item {
+    display: none;
+  }
+  .header-mid-container {
+    padding: 0 20px;
+  }
+  .mid-block-items .abb-logo {
+    width: 84px;
+    height: 38px;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .internet-banking-block {
+    display: none;
+  }
+  .header-bottom-container {
+    display: none;
+  }
+  .swiper-container {
+    flex-direction: column;
+  }
+  .swiper-title {
+    width: auto;
+    text-align: center;
+    align-items: center;
+    gap: 15px;
+  }
+  .swiper-title button {
+    width: 175px;
+    margin-top: 12px;
+  }
+  .swiper-image img {
+    width: 690px;
+    height: 690px;
+  }
+  .swiper-container {
+    height: auto;
+  }
+  .swiper-buttons-block {
+    position: absolute;
+    bottom: -520px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .swiper-image {
+    margin-top: 48px;
+  }
+}
+@media only screen and (max-width: 769px) {
+  .swiper-title {
+    gap: 10px;
+  }
+  .swiper-title h2 {
+    font-size: 30px;
+  }
+  .swiper-title p {
+    font-size: 14px;
+  }
+  .swiper-buttons-block {
+    bottom: -310px;
+  }
+  .swiper-image img {
+    width: 510px;
+    height: 510px;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .swiper-container {
+    padding: 0 10px;
+  }
+  .swiper-title {
+    gap: 10px;
+    width: 300px;
+  }
+  .swiper-title h2 {
+    font-size: 21px;
+  }
+  .swiper-buttons-block {
+    bottom: -125px;
+  }
+  .swiper-image img {
+    width: 310px;
+    height: 310px;
+  }
 }/*# sourceMappingURL=style.css.map */
