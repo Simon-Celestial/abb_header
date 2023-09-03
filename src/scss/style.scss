@@ -352,7 +352,7 @@ body {
     position: absolute;
     top: 74px;
     left: -40px;
-    display: flex;
+    display: none;
     position: absolute;
     z-index: 9999;
     border-top: 1px solid rgba(128, 128, 128, 0.1);
@@ -366,45 +366,34 @@ body {
       cursor: pointer;
     }
   }
-  .credit-dropdown {
-    display: none;
-  }
   .mortgage-dropdown {
     left: -117px;
-    display: none;
     .dropdown-full-container-block {
       gap: 45px;
     }
   }
   .deposit-dropdown {
-    display: none;
     left: -187px;
   }
   .cards-dropdown {
-    display: none;
     left: -277px;
   }
   .mortgage-text-margin {
     padding-bottom: 20px;
   }
   .money-transfer-dropdown {
-    display: none;
     left: -342px;
   }
   .current-account {
-  display: none;
-  left: -462px;
+    left: -462px;
   }
   .electronic-services {
-    display: none;
     left: -553px;
   }
   .bank-24 {
-    display: none;
     left: -689px;
   }
   .cashback {
-    display: none;
     left: -778px;
   }
   .partner-text-margin {
@@ -513,7 +502,6 @@ body {
   background: linear-gradient(90deg, #e1ebff 9.88%, #afb9cd 92.09%);
   align-items: center;
   justify-content: center;
-
 }
 .swiper-container {
   display: flex;
@@ -566,15 +554,15 @@ body {
   height: auto;
   align-items: center;
   margin-top: 40px;
-  .swiper-button{
+  .swiper-button {
     width: 35px;
     height: 4px;
     background-color: white;
     border-radius: 1px;
     cursor: pointer;
-  &:not(:last-child) {
-    margin-right: 20px;
-  }
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
   }
 }
 .swiper-image {
@@ -605,15 +593,25 @@ body {
   }
 }
 
-
-@media only screen and (max-width: 1117px)  {
+@media only screen and (max-width: 1550px) {
+  .nav-item .title-item {
+    width: 200px;
+  }
+  .nav-item .mortgage-dropdown .dropdown-full-container-block {
+    padding-right: 50px;
+  }
+}
+@media only screen and (max-width: 1120px) {
+  .nav-item .dropdown-full-container-second .img-block {
+    display: none;
+  }
   .left-item-title a {
     margin-top: 2px;
   }
   .internet-banking-block {
     img {
-      width: 14.50px;
-      height: 14.50px;
+      width: 14.5px;
+      height: 14.5px;
     }
     p {
       width: 70px;
@@ -627,9 +625,9 @@ body {
     width: 950px;
   }
 }
-@media only screen and (max-width: 993px)  {
+@media only screen and (max-width: 1000px) {
   .left-item-title {
-    a{
+    a {
       display: none;
     }
   }
@@ -644,7 +642,7 @@ body {
       display: none;
     }
   }
-  .mid-title-item{
+  .mid-title-item {
     display: none;
   }
   .header-mid-container {
@@ -693,8 +691,8 @@ body {
     margin-top: 48px;
   }
 }
-@media only screen and (max-width: 769px)  {
-  .swiper-title{
+@media only screen and (max-width: 769px) {
+  .swiper-title {
     gap: 10px;
     h2 {
       font-size: 30px;
@@ -710,13 +708,12 @@ body {
     width: 510px;
     height: 510px;
   }
-
 }
-@media only screen and (max-width: 550px)  {
+@media only screen and (max-width: 550px) {
   .swiper-container {
-      padding: 0 10px;
+    padding: 0 10px;
   }
-  .swiper-title{
+  .swiper-title {
     gap: 10px;
     width: 300px;
     h2 {
@@ -731,5 +728,3 @@ body {
     height: 310px;
   }
 }
-
-
